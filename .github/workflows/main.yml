@@ -1,0 +1,31 @@
+name: Compiler le mod
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Installer Java 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Installer Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.4'
+
+      - name: Compiler avec Gradle
+        run: gradle build
+
+      - name: Upload du .jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: democratic-mod
+          path: build/libs/democratic-mod-1.0.0.jar
