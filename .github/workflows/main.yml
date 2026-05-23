@@ -19,7 +19,7 @@ jobs:
       - name: Installer Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
-          gradle-version: '8.4'
+          gradle-version: '8.8'
 
       - name: Compiler avec Gradle
         run: gradle build
