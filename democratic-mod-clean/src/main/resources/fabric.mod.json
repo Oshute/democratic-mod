@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "democratic",
+  "version": "1.0.0",
+  "name": "Democratic Mod",
+  "description": "Les commandes importantes nécessitent un vote unanime de tous les joueurs connectés.",
+  "authors": ["Ton équipe de survie"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.democratic.mod.DemocraticMod"
+    ]
+  },
+  "mixins": [
+    "democratic.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric-api": "*",
+    "minecraft": "~1.20"
+  }
+}
