@@ -23,9 +23,10 @@ jobs:
 
       - name: Compiler avec Gradle
         run: gradle build
+        working-directory: democratic-mod-clean
 
       - name: Upload du .jar
         uses: actions/upload-artifact@v4
         with:
           name: democratic-mod
-          path: build/libs/democratic-mod-1.0.0.jar
+          path: democratic-mod-clean/build/libs/democratic-mod-1.0.0.jar
